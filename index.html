@@ -9,7 +9,7 @@
     <meta name=viewport content="width=device-width, initial-scale=1">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <style type="text/css">
-        *{margin: 0;padding: 0;border: 0; font-family: "微软雅黑";}
+        *{margin: 0;padding: 0;border: 0; font-family: "微软雅黑"; font-size: 14px;}
         li{list-style: none;}
         html,body{
             width: 100%;
@@ -37,6 +37,16 @@
         }
         #leftNav{
             padding: 0 10px;
+        }
+        #leftNav .title{
+            font-weight: bold;
+            height: 40px;
+            line-height: 40px;
+            border-bottom: 1px solid #333333;
+        }
+        #leftNav div{
+            height: 26px;
+            line-height: 26px;
         }
     </style>
 
@@ -68,7 +78,12 @@
     </header>
     <section class="content">
         <div id="leftNav" class="left">
-            <item class="item" :model="treeData"></item>
+            <div class="title">
+                目录
+            </div>
+            <ul>
+               <item class="item" :model="treeData"></item>
+            </ul>
         </div>
         <div class="right">
 
